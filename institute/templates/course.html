@@ -1,0 +1,98 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body %}
+<head>
+<link rel="stylesheet" href="{% static 'style.css2.css' %}">
+<style>
+    .bgm{
+        margin-top: 20px;
+        height:60vh;
+        width:100%;
+        background-image:url("{% static "images/course.jpg" %}"); 
+        background-repeat: no-repeat;
+        background-size:cover;
+        color: #111010;
+        text-align: center;
+      }
+    .flip-card .read-more{
+    background-color:blue;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    transition: 0.3s ease;
+}
+</style>
+</head>
+<section class="bgm">
+ <div class="containers">
+        
+    </div>
+</section>
+
+<section class="courses">
+    <div class="container">
+        <h2>Our Courses</h2>
+        <div class="king">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="{% static "images/18131.jpg" %}">
+                    <h3>Data Science</h3>
+                </div>
+                <div class="flip-card-back">
+                    <h3>This is a great choice for tech geeks, students, working professionals and aspiring data scientists 
+                        who want to upskill and build a better foundation is the stream of Data Science.</h3>
+                        <a href="{% url "contact" %}" class="read-more">Know More</a>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner1">
+                <div class="flip-card-front1">
+                    <img src="{% static "images/fullstack.jpg" %}" ;>
+                    <h3> FULL STACK DEVELOPMENT</h3>
+                </div>
+                <div class="flip-card-back1">
+                    <h3>Learn the right skills to break into a development career &
+                         advance yourself as a full-stack Developer. 
+                        It includes Frontend, Backend, databases, debugging & testing.</h3>
+                        <a href="{% url "contact" %}" class="read-more">Know More</a>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner2">
+                <div class="flip-card-front2">
+                    <img src="{% static "images/aws.jpg" %}" ;>
+                    <h3>AMAZON WEB SERVICES (AWS)</h3>
+                </div>
+                <div class="flip-card-back2">
+                    <h3>Right from the jobseeker or existing professional who wants to accelerate their career
+                         with advanced concepts of cloud computing, AWS and core services.</h3>
+                         <a href="{% url "contact" %}" class="read-more">Know More</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner3">
+                <div class="flip-card-front3">
+                    <img src="{% static "images/bigdata.jpg" %}" ;>
+                    <h3>BIG DATA ANALYTICS</h3>
+                </div>
+                <div class="flip-card-back3">
+                    <h3>Big data Analytics Modeler is to gain knowledge in analytics models to collect, data mining,
+                         data collection, data visualization,
+                         and integration, nodes, and statistical analysis.</h3>
+                         <a href="{% url "contact" %}" class="read-more">Know More</a>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
+{% endblock body %}

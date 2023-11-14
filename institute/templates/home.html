@@ -1,0 +1,79 @@
+{% extends "index.html" %}
+{% load static %}
+<!-- coaching_app/templates/coaching_app/home.html -->
+{% block body %}
+<style>
+    .container .read-more{
+        background-color: blue;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 19px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 15px;
+        transition: 0.3s ease;
+    }
+   </style>
+<section class="hero">
+     <div class="containers">
+    </div>
+</section>
+<section class="courses">
+    <div class="container">
+        <h2>OUR COURSES</h2>
+      <div class="king">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="{% static "images/18131.jpg" %}">
+                    <h3>Data Science</h3>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner1">
+                <div class="flip-card-front1">
+                    <img src="{% static "images/fullstack.jpg" %}" ;>
+                    <h3> FULL STACK DEVELOPMENT</h3>
+                </div>
+            </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner2">
+                <div class="flip-card-front2">
+                    <img src="{% static "images/aws.jpg" %}" ;>
+                    <h3>AMAZON WEB SERVICES (AWS)</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner3">
+                <div class="flip-card-front3">
+                    <img src="{% static "images/bigdata.jpg" %}" ;>
+                    <h3>BIG DATA ANALYTICS</h3>
+                </div>
+                
+            </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+<section class="about">
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Lur Institute is a pioneer in “Transforming Career and Lives” of individuals in the Digital
+            Space by catering advanced training on IBM Certified Data Science, Machine Learning, Artificial
+            Intelligence (AI), Full Stack Development, Amazon Web Services (AWS), DevOps, Microsoft Azure, Big data
+            Analytics, and Digital Marketing. We are passionate about bridging the gap between learning and
+            real-time implementation, so empowering individuals to be industry-ready and help firms in reaping huge
+            benefits is our primary goal.</p>
+            <a href="{% url "about" %}" class="read-more">Read More</a>
+    </div>
+</section>
+{% endblock body %}
+
+
+  

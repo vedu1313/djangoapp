@@ -1,0 +1,146 @@
+{% extends "index.html" %}
+{% block body %}
+{% load static %}
+<head>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: 'Roboto',sans-serif;
+    }
+    body{
+        background-color: #f2f2f2;
+    }
+    .heading{
+        width: 9    0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin:20px auto;
+    }
+    .heading h1{
+        font-size: 50px;
+        color: #000;
+        margin-bottom: 25px;
+        position: relative;
+
+    }
+    .heading h1::after{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        display: block;
+        margin:0 auto;
+        background-color: blue;
+    }
+    .heading p{
+        font-size: 18px;
+        color: #666;
+        margin: 65px;
+    }
+    .container{
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+    .container img{
+        height:70vh;
+        width:100%;
+        display: block;
+    }   
+    .about{ 
+       align-items: center;
+       width: 100% %;
+
+    }
+    .about-image{
+        flex: 1;
+        margin-right: 40px;
+        overflow: hidden;
+        
+    }
+
+    .about-content{
+        flex: 1;
+    }
+    .about-content h2{
+        font-size: 23px;
+        margin-bottom: 15px;
+        color: #333;
+    }
+    .about-content p{
+        font-size: 18px;
+        line-height: 1.5;
+        color: #666;
+    }
+    .about-content .read-more{
+        background-color: #4caf50;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #fff;
+        font-size: 19px;
+        text-decoration: none;
+        border-radius: 25px;
+        margin-top: 15px;
+        transition: 0.3s ease;
+    }
+    .about-content .read-more:hover{
+        background-color: #3e8e41;
+    }
+    @media screen and (max-width: 768px){
+        .heading{
+            padding:0px 20px;
+        }
+        .heading h1{
+            font-size: 36px;
+        }
+        .heading p{
+             font-size: 17px;
+             margin-bottom: 0px;
+        }
+        .container{
+            padding: 0px;
+        }
+        .about{
+            padding: 20px;
+            flex-direction:column ;
+        }
+        .about-image{
+            margin-right: 0px;
+            margin-bottom: 20px;
+        }
+        .about-content p{
+            padding: 0px;
+            font-size: 16px;
+        }
+        .about-content .read-more{
+            font-size: 16px;
+        }
+    }
+
+</style>
+</head>
+<body>
+<div class="heading">
+<h1>About us</h1>
+<p> LUR Research Labs is a pioneer in “Transforming Career and Lives” of individuals in the Digital Space by catering advanced training on IBM Certified Data Science, Python, IBM Certified Predictive Analytics Modeler, Machine Learning, Artificial Intelligence (AI), Full-stack web development, Amazon Web Services (AWS), DevOps, Microsoft Azure, Big data Analytics, Digital Marketing, and Career Launching program for students who are willing to showcase their skills in the competitive job market with valuable credentials, and also can complete courses with a certificate.</p>
+<div class="container">
+    <img src="{% static "images/about.jpg" %}" alt="">
+    <section class="about">
+        <div class="about-image">
+            
+        </div>
+        <div class="about-content">
+            <h2>IBM Registered Business Partner</h2>
+            <p>As an authorized “Training Partner with IBM” we strive to make individuals learn not just algorithms but also case studies and challenges derived from businesses. To improve the effectiveness and productivity of our trainee hackathons, workshops, and meetups are conducted on a timely basis. Having a dedicated placement vertical, which helps trainees conquer the business world, solves the complexities. LUR research labs are supporting over 100 companies in finding the best candidate, which can upskill the business requirements and foster growth.</p>
+                <h2> Best Edtech company</h2>
+                <p>Recognized and rewarded by Times Of India as the Best Training Institute in Hyderabad for Data Science & Full stack development Training. With relentless hard work, sophisticated equipment, advanced classrooms, cutting-edge training methodologies, practical training approach, and making individuals skillful. We have trained and placed 5000 students with a track record of 230+ batches, 100+ Hackathons, 500+ Industry Experts, 100+ meetups, and Industry connections.</p></p>
+            </div>
+    </section>
+</div>
+</div>
+{% endblock body %}
